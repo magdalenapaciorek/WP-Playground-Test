@@ -1,11 +1,19 @@
 {
     "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "plugins": ["sierotki", "carousel-block"],
-    "landingPage": "/wp-admin/admin.php?page=iworks_orphan_index",
+    "landingPage": "/wp-admin/post.php?post=6&action=edit",
+    "plugins": ["carousel-block"],
     "steps": [
         {
             "step": "setSiteLanguage",
             "language": "pl_PL"
+        },
+{
+            "step": "importWxr",
+            "file": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/magdalenapaciorek/WP-Playground-Test/refs/heads/main/export-wordpress-carousel.xml"
+            }
         }
-    ] 
+
+    ]
 }
